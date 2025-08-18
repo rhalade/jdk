@@ -154,7 +154,6 @@ module java.base {
     // module declaration be annotated with jdk.internal.javac.ParticipatesInPreview
     exports jdk.internal.javac to
         java.compiler,
-        java.desktop, // for ScopedValue
         jdk.compiler,
         jdk.incubator.vector, // participates in preview features
         jdk.jartool, // participates in preview features
@@ -318,6 +317,7 @@ module java.base {
     exports sun.security.internal.spec to
         jdk.crypto.cryptoki;
     exports sun.security.jca to
+        java.security.sasl,
         java.smartcardio,
         jdk.crypto.cryptoki,
         jdk.naming.dns;
@@ -402,8 +402,7 @@ module java.base {
     uses sun.text.spi.JavaTimeDateTimePatternProvider;
     uses sun.util.spi.CalendarProvider;
     uses sun.util.locale.provider.LocaleDataMetaInfo;
-    uses sun.util.resources.LocaleData.CommonResourceBundleProvider;
-    uses sun.util.resources.LocaleData.SupplementaryResourceBundleProvider;
+    uses sun.util.resources.LocaleData.LocaleDataResourceBundleProvider;
 
     // Built-in service providers that are located via ServiceLoader
 
