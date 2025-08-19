@@ -736,19 +736,19 @@ public class CAInterop {
                     new CATestURLs("https://test-root-2022-rsa.ssl.com",
                             "https://revoked-root-2022-rsa.ssl.com");
 
-            case "wisekeyglobalrsagbca" ->
-                    new CATestURLs("https://gbvalidssl.hightrusted.com",
-                            "https://gbrevokedssl.hightrusted.com");
-            case "wisekeyglobalecdsagcca" ->
-                    new CATestURLs("https://gcvalidssl.hightrusted.com",
-                            "https://gcrevokedssl.hightrusted.com");
-
             case "sectigotlsrootr46" ->
                     new CATestURLs("https://sectigopublicserverauthenticationrootr46-ev.sectigo.com",
                             "https://sectigopublicserverauthenticationrootr46-ev.sectigo.com:444");
             case "sectigotlsroote46" ->
                     new CATestURLs("https://sectigopublicserverauthenticationroote46-ev.sectigo.com",
                             "https://sectigopublicserverauthenticationroote46-ev.sectigo.com:444");
+
+            case "wisekeyglobalrsagbca" ->
+                    new CATestURLs("https://gbvalidssl.hightrusted.com",
+                            "https://gbrevokedssl.hightrusted.com");
+            case "wisekeyglobalecdsagcca" ->
+                    new CATestURLs("https://gcvalidssl.hightrusted.com",
+                            "https://gcrevokedssl.hightrusted.com");
 
             default -> throw new RuntimeException("No test setup found for: " + alias);
         };
